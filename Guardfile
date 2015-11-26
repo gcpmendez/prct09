@@ -47,7 +47,13 @@ guard :rspec, cmd: "bundle exec rspec" do
   watch(rspec.spec_helper) { rspec.spec_dir }
   watch(rspec.spec_support) { rspec.spec_dir }
   watch(rspec.spec_files)
-
+  
+  #ficheros introducidos por mi
+  watch(%r{^spec/.+_spec\.rb$})
+  watch(%r{^lib/lpp_Grupo3/(.+)\.rb$})     { |m| "spec/#{m[1]}_spec.rb" }
+  watch('spec/spec_helper.rb')  { "spec" }
+  #fin de fichero introdicidos por mi
+  
   # Ruby files
   ruby = dsl.ruby
   dsl.watch_spec_files_for(ruby.lib_files)

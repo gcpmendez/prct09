@@ -7,47 +7,47 @@ describe Book do
   
   # Debe existir o no una serie.
   it 'Debe existir o no una serie' do
-    expect(@book1.get_serie.length).to be >= 0
+    expect(@book1.serie.length).to be >= 0
   end
   
   # Debe existir una editorial.
   it 'Debe existir una editorial' do
-    expect(@book1.get_editorial).not_to be_empty  
+    expect(@book1.editorial).not_to be_empty  
   end
   
   # Debe existir un número de edición.
   it 'Debe existir un número de edición' do
-    expect(@book1.get_edition).to be > 0  
+    expect(@book1.edition).to be > 0  
   end
   
   # Debe existir uno o más números ISBN.
   it 'Debe existir uno o más números ISBN' do
-    expect(@book1.get_isbn.size).not_to be 0
+    expect(@book1.isbn.size).not_to be 0
   end
   
   # Existe un método para obtener la serie.
   it 'Existe un método para obtener la serie' do
-    expect(@book1).to respond_to(:get_serie) 
+    expect(@book1).to respond_to(:serie) 
   end 
   
   # Existe un método para obtener la editorial.
   it 'Existe un método para obtener la editorial' do
-    expect(@book1).to respond_to(:get_editorial) 
+    expect(@book1).to respond_to(:editorial) 
   end 
   
   # Existe un método para obtener el número de edición.
   it 'Existe un método para obtener el número de edición' do
-    expect(@book1).to respond_to(:get_edition) 
+    expect(@book1).to respond_to(:edition) 
   end 
   
   # Existe un ḿetodo para obtener el listado de ISBN.
   it 'Existe un ḿetodo para obtener el listado de ISBN' do
-    expect(@book1).to respond_to(:get_isbn) 
+    expect(@book1).to respond_to(:isbn) 
   end 
   
   # Existe un ḿetodo para obtener la referencia formateada.
   it 'Existe un ḿetodo para obtener la referencia formateada' do
-    expect(@book1.to_s).to eq("Cervantes , Y otro.\nDon Quijote.\n(Históricos españoles).\nAnaya; 4 Edicion (10/05/1980).\nISBN 10: 1234567890.\nISBN 9: 123789456.")
+    expect(@book1.to_s).to eq("Cervantes , Y otro.\nDon Quijote.\n(Históricos españoles).\nAnaya; 4 Edition (10/05/1980).\nISBN 10: 1234567890.\nISBN 9: 123789456.")
   end 
 
 end

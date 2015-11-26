@@ -17,7 +17,7 @@ describe MagazineArticle do
   
   # Debe existir una fecha de publicación.
   it 'Debe existir una fecha de publicación' do
-    expect(@magArticle1.get_date).not_to be_empty 
+    expect(@magArticle1.date).not_to be_empty 
   end
   
   

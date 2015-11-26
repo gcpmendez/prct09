@@ -17,7 +17,7 @@ describe Reference do
   
   # Debe existir una fecha de publicación.
   it 'Debe existir una fecha de publicación' do
-    expect(@ref1.get_date).not_to be_empty 
+    expect(@ref1.date).not_to be_empty 
   end
   
   
@@ -35,7 +35,7 @@ describe Reference do
   
   # Existe un método para obtener la fecha de publicacíon.
   it 'Existe un método para obtener la fecha de publicación' do
-    expect(@ref1).to respond_to(:get_date) 
+    expect(@ref1).to respond_to(:date) 
   end 
   
 end

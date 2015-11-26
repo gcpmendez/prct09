@@ -20,8 +20,7 @@ class Reference
 	    @title
 	end
 	
-	def get_date
-	    @date
-	end
+
+
 
 end

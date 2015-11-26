@@ -27,7 +27,7 @@ describe LinkedList do
     @lista.insert_by_begin(@book1)
     @lista.insert_by_begin(@book1)
     @lista.insert_by_begin(@book1)
-    expect(@lista.extract_by_begin().to_s).to eq("Dave Thomas , Andy Hunt , Chad Fowler.\nProgramming Ruby 1.9 &2.0: The Pragmatic Programmers Guide.\n(The Facets of Ruby).\nPragmatic Bookshelf; 4 Edicion (07/07/2013).\nISBN 14: 978-1937785499.\nISBN 10: 1937785491.")
+    expect(@lista.extract_by_begin().to_s).to eq("Dave Thomas , Andy Hunt , Chad Fowler.\nProgramming Ruby 1.9 &2.0: The Pragmatic Programmers Guide.\n(The Facets of Ruby).\nPragmatic Bookshelf; 4 Edition (07/07/2013).\nISBN 14: 978-1937785499.\nISBN 10: 1937785491.")
   end 
   
 # Se puede insertar un elemento
