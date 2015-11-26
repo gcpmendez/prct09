@@ -1,41 +1,78 @@
-# LppGrupo3
+[![Build Status](https://travis-ci.org/gcpmendez/prct09.svg?branch=master)](https://travis-ci.org/gcpmendez/prct09)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lpp_Grupo3`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Práctica de laboratorio \#9
+      
+Este práctica ha sido desarrollado en la asignatura de **Lenguajes y Paradigmas de la Programación** del **_Grado en Ingeniería Informática_** de la **ULL**.
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
+## Descripción de la práctica: POO. módulos.
+1. Considere la jerarquía de clases Ruby para representar referencias bibliográficas de prácticas
+anteriores.
+Modifíquela de manera que las instancias sean comparables.
+Utilizar la metodología de desarrollo dirigido por pruebas (Test Driven Development - TDD) y
+la herramienta RSpec.
+2. Considere la clase Ruby para representar y gestionar listas doblemente enlazadas de prácticas
+anteriores.
+Modifíquela de manera que las instancias sean enumerables.
+Utilizar la metodología de desarrollo dirigido por pruebas (Test Driven Development - TDD) y
+la herramienta RSpec.
+3. Comprobar con la herramienta Travis de Integración Continua. el código Ruby desarrollado.
+Con ella se comprueba la portabilidad de los desarrollos entre distintas plataformas y versiones
+de Ruby.
+Darse de alta en [(https://travis-ci.org/) y permitir que se acceda desde Github (poniendo
+a ON el proyecto).
+Crear un fichero .travis.yml que contenga el listado de plataformas sobre las que se quiere
+comprobar el correcto funcionamiento, por ejemplo:
 
 ```ruby
-gem 'lpp_Grupo3'
+language: ruby
+rvm:
+- 2.2.0
+- 1.9.3
+- jruby-19mode # JRuby in 1.9 mode
+- rbx-19mode
 ```
+Para trabajar con Travis el repositorio debe estar en Github. Crear un ‘repositorio’ en Github.  
+4. Escribir la dirección http del repositorio que se ha creado en Github en la tarea habilitada en
+el Campus Virtual.
 
-And then execute:
+## Árbol de ficheros y directorios
+```
+.
+├── CODE_OF_CONDUCT.md
+├── Gemfile
+├── Gemfile.lock
+├── Guardfile
+├── LICENSE.txt
+├── README.md
+├── Rakefile
+├── bin
+│   ├── console
+│   └── setup
+├── lib
+│   ├── lpp_Grupo3
+│   │   ├── book.rb
+│   │   ├── electronicdocument.rb
+│   │   ├── journalarticle.rb
+│   │   ├── linkedList.rb
+│   │   ├── magazinearticle.rb
+│   │   ├── reference.rb
+│   │   ├── regularpublications.rb
+│   │   └── version.rb
+│   └── lpp_Grupo3.rb
+├── lpp_Grupo3.gemspec
+├── lpp_Grupo3_spec.rb
+├── spec
+│   ├── book_spec.rb
+│   ├── electronicdocument_spec.rb
+│   ├── journalarticle_spec.rb
+│   ├── linkedlist_spec.rb
+│   ├── magazinearticle_spec.rb
+│   ├── reference_spec.rb
+│   ├── regularpublications_spec.rb
+│   └── spec_helper.rb
+├── spec_helper.rb
+└── tmp
+```
+## Ayúdame a mejorar este tutorial
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install lpp_Grupo3
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/lpp_Grupo3. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+Cada **bugs** que encuentres házmelo saber a [gcpmendez@gmail.com](mailto:gcpmendez@gmail.com)
