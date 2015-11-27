@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'lpp_Grupo3/version'
+require 'prct09/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "lpp_Grupo3"
-  spec.version       = LppGrupo3::VERSION
+  spec.name          = "prct09"
+  spec.version       = Prct09::VERSION
   spec.authors       = ["Germán Méndez"]
   spec.email         = ["gcpmendez@gmail.com"]
 
