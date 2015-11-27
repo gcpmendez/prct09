@@ -1,5 +1,6 @@
 
 class LinkedList
+	include Enumerable
 	attr_accessor :node
     	
 	def initialize()
@@ -82,5 +83,14 @@ class LinkedList
 	        insert_by_end(others[i])
 	    end
 	end
+	
+	def each
+		iterator = @head
+		while !iterator.nil?
+		    yield iterator[:value]
+			iterator = iterator[:next]
+		end
+	end
+		
 	
 end

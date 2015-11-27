@@ -12,7 +12,9 @@ class Reference
 	        @date = date
 	end
 	
-
+	def get_title
+		@title
+	end
 	
 	def <=>(other)
       return nil unless other.is_a? Reference
