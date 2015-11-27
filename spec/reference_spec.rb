@@ -2,17 +2,18 @@ require 'spec_helper'
 
 describe Reference do
   before :each do
-    @ref1 = Reference.new(["Cervantes","Y otro"],"Don Quijote", "10/05/1980")
+     @ref1 = Reference.new(["Dervantes","Y otro","asdf"],"Non Quijote", "20/05/1980")
   end
   
+    
   # Debe existir uno o más autores
   it 'Debe existir uno o más autores' do
-    expect(@ref1.get_authors.size).not_to be 0
+    expect(@ref1.authors.size).not_to be 0
   end
   
   # Debe existir un título
   it 'Debe existir un título' do
-    expect(@ref1.get_title).not_to be_empty
+    expect(@ref1.title).not_to be_empty
   end
   
   # Debe existir una fecha de publicación.
@@ -23,12 +24,12 @@ describe Reference do
   
   # Existe un método para obtener el listado de autores.
   it 'Existe un método para obtener el listado de autores' do
-    expect(@ref1).to respond_to(:get_authors) 
+    expect(@ref1).to respond_to(:authors) 
   end  
   
   # Existe un método para obtener el título.
   it 'Existe un método para obtener el título' do
-    expect(@ref1).to respond_to(:get_title) 
+    expect(@ref1).to respond_to(:title) 
   end 
   
   

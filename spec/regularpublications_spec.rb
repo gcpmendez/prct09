@@ -7,12 +7,12 @@ describe Regularpublications do
   
   # Debe existir uno o más autores
   it 'Debe existir uno o más autores' do
-    expect(@reg1.get_authors.size).not_to be 0
+    expect(@reg1.authors.size).not_to be 0
   end
   
   # Debe existir un título
   it 'Debe existir un título' do
-    expect(@reg1.get_title).not_to be_empty
+    expect(@reg1.title).not_to be_empty
   end
   
   # Debe existir una fecha de publicación.
@@ -23,12 +23,12 @@ describe Regularpublications do
   
   # Existe un método para obtener el listado de autores.
   it 'Existe un método para obtener el listado de autores' do
-    expect(@reg1).to respond_to(:get_authors) 
+    expect(@reg1).to respond_to(:authors) 
   end  
   
   # Existe un método para obtener el título.
   it 'Existe un método para obtener el título' do
-    expect(@reg1).to respond_to(:get_title) 
+    expect(@reg1).to respond_to(:title) 
   end 
   
   

@@ -35,4 +35,5 @@ class Book < Reference
 	    text
 	end
 	
+
 end
